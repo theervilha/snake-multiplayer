@@ -3,8 +3,7 @@ const MAP_HEIGHT = 500;
 const BLOCK_SIZE = 20;
 
 window.addEventListener("load", () => {
-    //const socket = new WebSocket('ws://localhost:8080');
-    const socket = new WebSocket('ws://localhost:3001');
+    const socket = new WebSocket('wss://snake-multiplayer-server.onrender.com');
 
     const canvas = document.getElementById("board");
     canvas.width = MAP_WIDTH;

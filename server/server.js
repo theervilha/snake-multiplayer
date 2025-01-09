@@ -50,7 +50,6 @@ wss.on('connection', (ws) => {
                 const player = gameState.players.find(player => player.id === socketId)
                 const firstPositionCopy = { ...player.positions[0] };
                 const lastPositionCopy = { ...player.positions[player.positions.length - 1] };
-                gameState.winner = player
                 for (let i = player.positions.length - 1; i >= 0; i--) {
                     if (i === 0) {
                         player.positions[i] = {
